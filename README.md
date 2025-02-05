@@ -37,3 +37,12 @@ import { loadCJSModule, resolveCJSModule } from 'es-interop'
 loadCJSModule('some-module', import.meta.url) // load `some-module` with Node resolution algorithm
 resolveCJSModule('some-module', import.meta.url) // resolve `some-module` with Node resolution algorithm
 ```
+
+### Default Imports Interop
+
+```ts
+import { interopDefault, loadModule } from 'es-interop'
+
+const mod = await loadModule('some-module', import.meta.url)
+interopDefault(mod) // Whether from ESM or CJS
+```
