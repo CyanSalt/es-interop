@@ -1,7 +1,7 @@
 {
   "name": "es-interop",
   "version": "0.1.0-0",
-  "description": "Load modules dynamically from ESM, CJS, TS, etc.",
+  "description": "Load modules dynamically from ESM, CJS, TS, JSON, etc.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
