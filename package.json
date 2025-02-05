@@ -1,0 +1,56 @@
+{
+  "name": "es-interop",
+  "version": "0.1.0-0",
+  "description": "Load modules dynamically from ESM, CJS, TS, etc.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "lint": "eslint --fix './**/*.{js,ts,vue}'",
+    "prepack": "unbuild",
+    "release": "release-it",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyanSalt/es-interop.git"
+  },
+  "keywords": [
+    "esm",
+    "cjs",
+    "typescript"
+  ],
+  "author": "CyanSalt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CyanSalt/es-interop/issues"
+  },
+  "homepage": "https://github.com/CyanSalt/es-interop#readme",
+  "engines": {
+    "node": "^18.17.0 || >=19.9.0"
+  },
+  "devDependencies": {
+    "@cyansalt/eslint-config": "^4.3.0",
+    "@cyansalt/tsconfig": "^2.2.1",
+    "@local/test-modules": "file:tests/modules",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@types/node": "^22.13.1",
+    "eslint": "^9.19.0",
+    "release-it": "^18.1.2",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1",
+    "vitest": "^3.0.5"
+  },
+  "dependencies": {
+    "oxc-resolver": "^4.0.0",
+    "tsx": "^4.19.2"
+  }
+}

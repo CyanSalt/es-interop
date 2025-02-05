@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "type": "module",
+  "main": "./index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./*": "./*"
+  }
+}

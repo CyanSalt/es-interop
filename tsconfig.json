@@ -1,0 +1,15 @@
+{
+  "extends": "@cyansalt/tsconfig/tsconfig.lib",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "ESNext",
+    "module": "Node16",
+    "moduleResolution": "Node16"
+  },
+  "include": [
+    "src"
+  ]
+}
