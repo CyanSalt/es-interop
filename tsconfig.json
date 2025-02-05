@@ -6,8 +6,8 @@
     "rootDir": "src",
     "outDir": "dist",
     "target": "ESNext",
-    "module": "Node16",
-    "moduleResolution": "Node16"
+    "module": "ESNext",
+    "moduleResolution": "bundler"
   },
   "include": [
     "src"
