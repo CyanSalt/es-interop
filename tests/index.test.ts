@@ -13,6 +13,16 @@ describe('loadESModule', () => {
     })
   })
 
+  test('ESM module from another directory', async () => {
+    const mod = await loadESModule('./tests/modules/index.mjs', new URL('../package.json', import.meta.url).href)
+    expect(mod).toMatchObject({
+      value: 42,
+      default: {
+        kind: 'module',
+      },
+    })
+  })
+
   test('ESM module from package entry', async () => {
     const mod = await loadESModule('@local/test-modules', import.meta.url)
     expect(mod).toMatchObject({
@@ -91,6 +101,14 @@ describe('loadCJSModule', () => {
     })
   })
 
+  test('CommonJS module from another directory', async () => {
+    const mod = loadCJSModule('./tests/modules/index.cjs', new URL('../package.json', import.meta.url).href)
+    expect(mod).toEqual({
+      kind: 'commonjs',
+      value: 42,
+    })
+  })
+
   test('CommonJS module from package entry', async () => {
     const mod = loadCJSModule('@local/test-modules', import.meta.url)
     expect(mod).toMatchObject({
@@ -137,6 +155,16 @@ describe('loadTSModule', () => {
     })
   })
 
+  test('TypeScript module from another directory', async () => {
+    const mod = await loadTSModule('./tests/modules/index.ts', new URL('../package.json', import.meta.url).href)
+    expect(mod).toMatchObject({
+      value: 42,
+      default: {
+        kind: 'typescript',
+      },
+    })
+  })
+
   test('TypeScript module from package file', async () => {
     const mod = await loadTSModule('@local/test-modules/index.ts', import.meta.url)
     expect(mod).toMatchObject({
@@ -153,6 +181,16 @@ describe('loadModule', () => {
 
   test('ESM module', async () => {
     const mod = await loadModule('./modules/index.mjs', import.meta.url)
+    expect(mod).toMatchObject({
+      value: 42,
+      default: {
+        kind: 'module',
+      },
+    })
+  })
+
+  test('ESM module from another directory', async () => {
+    const mod = await loadESModule('./tests/modules/index.mjs', new URL('../package.json', import.meta.url).href)
     expect(mod).toMatchObject({
       value: 42,
       default: {
@@ -229,6 +267,16 @@ describe('loadModule', () => {
 
   test('TypeScript module', async () => {
     const mod = await loadModule('./modules/index.ts', import.meta.url)
+    expect(mod).toMatchObject({
+      value: 42,
+      default: {
+        kind: 'typescript',
+      },
+    })
+  })
+
+  test('TypeScript module from another directory', async () => {
+    const mod = await loadModule('./tests/modules/index.ts', new URL('../package.json', import.meta.url).href)
     expect(mod).toMatchObject({
       value: 42,
       default: {
