@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.3](https://github.com/CyanSalt/es-interop/compare/v0.1.2...v0.1.3) (2025-02-10)
+
+### Bug Fixes
+
+* exports ([859bb79](https://github.com/CyanSalt/es-interop/commit/859bb794298d32a4635898d2321ad553602ada1a))
+
 ## [0.1.2](https://github.com/CyanSalt/es-interop/compare/v0.1.1...v0.1.2) (2025-02-05)
 
 ### Bug Fixes
