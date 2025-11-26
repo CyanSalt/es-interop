@@ -54,8 +54,10 @@ export function loadModule<T = any>(id: string, importer: string = getDefaultImp
   return loadESModule<T>(id, importer)
 }
 
-export function interopDefault<T = any>(mod: unknown): T {
-  if (typeof mod !== 'object' || mod === null) return mod as T
+export type InteropDefault<T> = T extends { default: infer U } ? U : T
+
+export function interopDefault<T>(mod: T): InteropDefault<T> {
+  if (typeof mod !== 'object' || mod === null) return mod as InteropDefault<T>
   // e.g. `export default ...` --(tsc)-> `exports.default` --(dynamic import)-> `Module { default: { default: ... } }`
-  return 'default' in mod ? interopDefault<T>(mod.default) : mod as T
+  return ('default' in mod ? interopDefault<T>(mod.default as T) : mod) as InteropDefault<T>
 }
