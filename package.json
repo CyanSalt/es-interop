@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@cyansalt/eslint-config": "^4.3.0",
-    "@cyansalt/tsconfig": "^2.2.1",
+    "@cyansalt/tsconfig": "^3.0.0",
     "@local/test-modules": "file:tests/modules",
     "@release-it/conventional-changelog": "^10.0.0",
     "@types/node": "^22.13.1",

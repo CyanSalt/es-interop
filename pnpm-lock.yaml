@@ -19,11 +19,11 @@ importers:
         specifier: ^4.3.0
         version: 4.3.0(@babel/core@7.26.7)(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.19.0(jiti@2.4.2)))(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
       '@cyansalt/tsconfig':
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: ^3.0.0
+        version: 3.0.0
       '@local/test-modules':
         specifier: file:tests/modules
-        version: modules@file:tests/modules
+        version: file:tests/modules
       '@release-it/conventional-changelog':
         specifier: ^10.0.0
         version: 10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@18.1.2(@types/node@22.13.1)(typescript@5.7.3))
@@ -157,8 +157,8 @@ packages:
       typescript:
         optional: true
 
-  '@cyansalt/tsconfig@2.2.1':
-    resolution: {integrity: sha512-Ld392akmPNSk4UpMhST41BLmXEgz1keEsYWhVwhEBXcZ9uIwrrgf8d8j2VJDDuV3vaZrz/4PxpbuywJeeuYJGw==}
+  '@cyansalt/tsconfig@3.0.0':
+    resolution: {integrity: sha512-RNCVL2Y0ChN+tg7A6hSWk2p4kWda0dsMI25xxDrOMLKWpgIYCsb73Qg9jZfGg7i0FSgMAaPWBpHVdsdxhojiAg==}
 
   '@emnapi/core@1.3.1':
     resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
@@ -671,6 +671,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@local/test-modules@file:tests/modules':
+    resolution: {directory: tests/modules, type: directory}
 
   '@napi-rs/wasm-runtime@0.2.6':
     resolution: {integrity: sha512-z8YVS3XszxFTO73iwvFDNpQIzdMmSDTP/mB3E/ucR37V3Sx57hSExcXyMoNwaucWxnsWf4xfbZv0iZ30jr0M4Q==}
@@ -2659,9 +2662,6 @@ packages:
   mlly@1.7.4:
     resolution: {integrity: sha512-qmdSIPC4bDJXgZTCR7XosJiNKySV7O215tsPtDN9iEO/7q/76b/ijtgRu/+epFXSJhijtTCCGp3DWS549P3xKw==}
 
-  modules@file:tests/modules:
-    resolution: {directory: tests/modules, type: directory}
-
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
@@ -3986,7 +3986,7 @@ snapshots:
       - eslint-plugin-import
       - supports-color
 
-  '@cyansalt/tsconfig@2.2.1': {}
+  '@cyansalt/tsconfig@3.0.0': {}
 
   '@emnapi/core@1.3.1':
     dependencies:
@@ -4346,6 +4346,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@local/test-modules@file:tests/modules': {}
 
   '@napi-rs/wasm-runtime@0.2.6':
     dependencies:
@@ -6549,8 +6551,6 @@ snapshots:
       pathe: 2.0.2
       pkg-types: 1.3.1
       ufo: 1.5.4
-
-  modules@file:tests/modules: {}
 
   ms@2.1.3: {}
 

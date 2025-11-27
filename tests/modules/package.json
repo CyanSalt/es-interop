@@ -1,4 +1,5 @@
 {
+  "name": "@local/test-modules",
   "private": true,
   "type": "module",
   "main": "./index.cjs",
