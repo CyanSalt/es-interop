@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
       "import": {
@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "lint": "eslint --fix './**/*.{js,ts,vue}'",
-    "prepack": "unbuild",
+    "prepack": "tsdown",
     "release": "release-it",
     "test": "vitest"
   },
@@ -53,8 +53,8 @@
     "@types/node": "^22.13.1",
     "eslint": "^9.19.0",
     "release-it": "^18.1.2",
+    "tsdown": "^0.16.7",
     "typescript": "^5.7.3",
-    "unbuild": "^3.3.1",
     "vitest": "^3.0.5"
   },
   "dependencies": {
